@@ -29,7 +29,11 @@ a {
 }
 /* End Global Rules */
 #app {
+<<<<<<< HEAD
 	background-image: url(/Images/Day/fogy.jpg);
+=======
+	background-image: url(../Images/Night/rain.jpg);
+>>>>>>> 5e01d5724344bb0372fc9b8610ae1c6e08a46c54
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
