@@ -9,7 +9,7 @@ let daily = document.getElementById('daily');
 // Default City
 let cityInput = 'Berlin';
 // Add addEventListener to the Search btn
-btn.addEventListener('click', (event) => {
+btn.addEventListener('click', () => {
 	// // prevent Browser Default Reload
 	// event.preventDefault();
 	// change the city after typing it in the input field and click the btn
@@ -23,7 +23,7 @@ btn.addEventListener('click', (event) => {
 // ----------------------------------------------------------------
 // we Select a city form the Popular Cities List and add it the Api(Query String).
 for (let i = 0; i < popCities.children.length; i++) {
-	popCities.children[i].addEventListener('click', (event) => {
+	popCities.children[i].addEventListener('click', () => {
 		cityInput = event.target.textContent;
 		fetchWeatherApi();
 	});
@@ -32,8 +32,13 @@ for (let i = 0; i < popCities.children.length; i++) {
 // Main Function That fetches and display all Wanted data form the Weather API
 async function fetchWeatherApi() {
 	let resopse = await fetch('./data/weather.json');
+	// let resopse = await fetch(
+	// 	`https://api.weatherapi.com/v1/forecast.json?key=f1a7e2ed4cc8463a884192227223011&q=${cityInput}&days=10&aqi=no&alerts=no`
+	// );
 	let data = await resopse.json();
+
 	console.log(data);
+
 	// ----------------------------------------------------------------
 	// saving all wanted data form the Api into an Object
 	let dataObject = {
@@ -63,6 +68,7 @@ async function fetchWeatherApi() {
 	document.getElementById('humidity').textContent = dataObject.humidityInfo;
 	document.getElementById('wind').textContent = dataObject.windInfo;
 	document.getElementById('rain').textContent = dataObject.rainInfo;
+
 	// ----------------------------------------------------------------
 	// function to Display Days
 	const displayDaysForecast = () => {

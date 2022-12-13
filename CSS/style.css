@@ -35,7 +35,7 @@ a {
 	background-position: center;
 	color: #fff;
 	min-height: 100vh;
-	/* opacity: 0; */
+	opacity: 0;
 }
 .container {
 	display: flex;
