@@ -34,7 +34,7 @@ async function fetchWeatherApi() {
 	// let resopse = await fetch(
 	// 	`https://api.weatherapi.com/v1/forecast.json?key=f1a7e2ed4cc8463a884192227223011&q=${cityInput}&days=10&aqi=no&alerts=no`
 	// );
-	let resopse = await fetch('/data/weather.json');
+	let resopse = await fetch('./data/weather.json');
 	let data = await resopse.json();
 	console.log(data);
 	// ----------------------------------------------------------------
