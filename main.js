@@ -104,7 +104,7 @@ async function fetchWeatherApi() {
 		}
 		if (code === 1000) {
 			// Set the background Image to clear if the Weather is clear
-			app.style.backgroundImage = `url(../Images/${timeOfDay}/clear.jpg)`;
+			app.style.backgroundImage = `url(/Images/${timeOfDay}/clear.jpg)`;
 		} else if (
 			code === 1003 ||
 			code === 1006 ||
@@ -118,7 +118,7 @@ async function fetchWeatherApi() {
 			code === 1282
 		) {
 			//if its Cloudy Weather
-			app.style.backgroundImage = `url(../Images/${timeOfDay}/cloudy.jpg)`;
+			app.style.backgroundImage = `url(/Images/${timeOfDay}/cloudy.jpg)`;
 		} else if (
 			code === 1063 ||
 			code === 1069 ||
@@ -141,10 +141,10 @@ async function fetchWeatherApi() {
 			code === 1252
 		) {
 			//if its Raining Weather
-			app.style.backgroundImage = `url(../Images/${timeOfDay}/rain.jpg)`;
+			app.style.backgroundImage = `url(/Images/${timeOfDay}/rain.jpg)`;
 		} else {
 			// for Snow Weather
-			app.style.backgroundImage = `url(../Images/${timeOfDay}/snow.jpg)`;
+			app.style.backgroundImage = `url(/Images/${timeOfDay}/snow.jpg)`;
 		}
 		app.style.opacity = '1';
 	};

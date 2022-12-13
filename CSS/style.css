@@ -29,7 +29,7 @@ a {
 }
 /* End Global Rules */
 #app {
-	background-image: url(../Images/Night/mainSky.jpg);
+	background-image: url(/Images/Night/rain.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
