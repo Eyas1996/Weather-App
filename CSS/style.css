@@ -322,7 +322,7 @@ a {
 @media (min-width: 1222px) {
 	.container .card {
 		width: 675px;
-		height: 100vh;
+		height: 100%;
 	}
 }
 /* End Media Queries */
