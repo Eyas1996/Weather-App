@@ -40,7 +40,6 @@ a {
 .container {
 	display: flex;
 	justify-content: space-between;
-	/* height: 700px */
 }
 /* Start The header Section  */
 .container header {
