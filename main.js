@@ -31,9 +31,9 @@ for (let i = 0; i < popCities.children.length; i++) {
 // ----------------------------------------------------------------
 // Main Function That fetches and display all Wanted data form the Weather API
 async function fetchWeatherApi() {
-// 	let resopse = await fetch('./data/weather.json');
+// 	let response = await fetch('./data/weather.json');
 	let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=fa9cf04c30b14d8ab41125516221812&q=${cityInput}&days=10&aqi=no&alerts=no`)
-	let data = await resopse.json();
+	let data = await response.json();
 
 	console.log(data);
 
