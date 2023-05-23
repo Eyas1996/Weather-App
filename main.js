@@ -108,7 +108,7 @@ async function fetchWeatherApi() {
     // give a random Day OR Night
     let num = Math.floor(Math.random() * 2) + 1;
     if (num === 1) {
-      timeOfDay = "day";
+      timeOfDay = "Day";
     }
     console.log(timeOfDay);
     // Get the unique id-code for each weather condition
