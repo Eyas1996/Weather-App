@@ -1,84 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Weather App</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
     <!-- Render All Elements Normally -->
-    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/normalize.css" />
     <!-- Font Awesome Library -->
-    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css" />
     <!-- Main Template CSS File -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.css" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;900&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;700;900&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="app">
       <div class="container">
         <header>
-        <div class="title">The Weather</div>
-        <div class="current">
-          <div class="temperature">
-            <span id="current-temp"></span>
-            <span id="min-max-temp"></span>
+          <div class="title">The Weather</div>
+          <div class="current">
+            <div class="temperature">
+              <span id="current-temp"></span>
+              <span id="min-max-temp"></span>
+            </div>
+            <div class="location">
+              <span id="current-city"></span>
+              <!-- <span id="time"></span> -->
+            </div>
+            <div class="weather">
+              <span><img id="icon" src="" alt="" /></span>
+              <span id="status"></span>
+            </div>
           </div>
-          <div class="location">
-            <span id="current-city"></span>
-            <span id="time"></span>
+        </header>
+        <div class="card">
+          <div class="header-card">
+            <input type="text" placeholder="Search City" id="search" />
+            <button id="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
-          <div class="weather">
-            <span><img id="icon" src="" alt=""></span>
-            <span id="status"></span>
+          <div class="cities">
+            <ul id="popular-cities">
+              <li class="city">Sapporo</li>
+              <li class="city">Kingston</li>
+              <li class="city">California</li>
+              <li class="city">Yellowknife</li>
+              <li class="city">Yaounde</li>
+            </ul>
           </div>
-        </div>
-      </header>
-      <div class="card">
-        <div class="header-card">
-          <input type="text" placeholder="Search City" id="search">
-          <button id="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-        <div class="cities">
-          <ul id="popular-cities">
-            <li class="city">Damaskus</li>
-            <li class="city">Kingston</li>
-            <li class="city">Kuwait</li>
-            <li class="city">Yellowknife</li>
-            <li class="city">Bangkok</li>
-          </ul>
-        </div>
-        <div class="info">
-          <h2 class="details">Weather Details</h2>
-          <div >
-            <span>Feels Like</span>
-            <span id="feel"></span>
-          </div>
-          <div>
-            <span>Chance Of rain</span>
-            <span id="rain"></span>
-          </div>
-          <div>
-            <span>Cloudy</span>
+          <div class="info">
+            <h2 class="details">Weather Details</h2>
+            <div>
+              <span>Feels Like</span>
+              <span id="feel"></span>
+            </div>
+            <div>
+              <span>Sky description</span>
+              <span id="description"></span>
+            </div>
+            <!-- <div>
+            <span>Sky</span>
             <span id="sky"></span>
+          </div> -->
+            <div>
+              <span>Humidity</span>
+              <span id="humidity"></span>
+            </div>
+            <div>
+              <span>Wind Speed</span>
+              <span id="wind"></span>
+            </div>
           </div>
-          <div>
-            <span>Humidity</span>
-            <span id="humidity"></span>
-          </div>
-          <div>
-            <span>Wind Speed</span>
-            <span id="wind"></span>
-          </div>
-        </div>
-        <div id="daily" class="daily">
+          <!-- <div id="daily" class="daily">
+        </div> -->
         </div>
       </div>
-      </div>
-    </div> 
-    
+    </div>
+
     <script type="module" src="./main.js"></script>
   </body>
 </html>
