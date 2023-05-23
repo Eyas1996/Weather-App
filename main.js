@@ -125,7 +125,7 @@ async function fetchWeatherApi() {
       code === 231 ||
       code === 232
     ) {
-      app.style.backgroundImage = `url(../Images/${timeOfDay}/thunder.jpg)`;
+      app.style.backgroundImage = `url(./Images/${timeOfDay}/thunder.jpg)`;
     } else if (
       // for Drizzle Weather
       code === 300 ||
@@ -138,7 +138,7 @@ async function fetchWeatherApi() {
       code === 314 ||
       code === 321
     ) {
-      app.style.backgroundImage = `url(../Images/${timeOfDay}/rain.jpg)`;
+      app.style.backgroundImage = `url(./Images/${timeOfDay}/rain.jpg)`;
     } else if (
       // for Rain Weather
       code === 500 ||
@@ -152,7 +152,7 @@ async function fetchWeatherApi() {
       code === 522 ||
       code === 531
     ) {
-      app.style.backgroundImage = `url(../Images/${timeOfDay}/rain.jpg)`;
+      app.style.backgroundImage = `url(./Images/${timeOfDay}/rain.jpg)`;
     } else if (
       // for Snow
       code === 600 ||
@@ -167,7 +167,7 @@ async function fetchWeatherApi() {
       code === 621 ||
       code === 622
     ) {
-      app.style.backgroundImage = `url(../Images/${timeOfDay}/snow.jpg)`;
+      app.style.backgroundImage = `url(./Images/${timeOfDay}/snow.jpg)`;
     } else if (
       // for Atmosphere
       code === 600 ||
@@ -182,13 +182,13 @@ async function fetchWeatherApi() {
       code === 621 ||
       code === 622
     ) {
-      app.style.backgroundImage = `url(../Images/${timeOfDay}/fogy.jpg)`;
+      app.style.backgroundImage = `url(./Images/${timeOfDay}/fogy.jpg)`;
     } else if (code === 800) {
       // for Clear Weather
-      app.style.backgroundImage = `url(../Images/${timeOfDay}/clear.jpg)`;
+      app.style.backgroundImage = `url(./Images/${timeOfDay}/clear.jpg)`;
     } else if (code === 801 || code === 802 || code === 803 || code === 804) {
       //if its Cloudy Weather
-      app.style.backgroundImage = `url(../Images/${timeOfDay}/cloudy.jpg)`;
+      app.style.backgroundImage = `url(./Images/${timeOfDay}/cloudy.jpg)`;
       //if its Raining Weather
     }
     app.style.opacity = "1";
