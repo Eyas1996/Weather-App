@@ -38,9 +38,9 @@ a {
   opacity: 0;
 }
 .container {
-  display: flex;
-  justify-content: space-between;
-  /* height: 700px */
+	display: flex;
+	justify-content: space-between;
+	/* height: 700px */
 }
 /* Start The header Section  */
 .container header {
@@ -313,10 +313,9 @@ a {
   }
 }
 @media (min-width: 1222px) {
-  .container .card {
-    width: 515px;
-    height: 100%;
-    margin-top: 35px;
-  }
+	.container .card {
+		width: 675px;
+		height: 100vh;
+	}
 }
 /* End Media Queries */
