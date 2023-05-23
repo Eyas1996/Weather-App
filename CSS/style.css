@@ -193,7 +193,7 @@ a {
 .container .card .info {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 25px;
   padding-bottom: 15px;
   margin-bottom: 20px;
 }
@@ -314,8 +314,10 @@ a {
 }
 @media (min-width: 1222px) {
 	.container .card {
-		width: 675px;
+		width: 515px;
 		height: 100vh;
 	}
+  .container .card .info {
+    gap: 25px;
 }
 /* End Media Queries */

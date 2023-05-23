@@ -55,8 +55,9 @@ async function fetchWeatherApi() {
     description: `${data.weather[0].description}`,
     humidityInfo: `${data.main.humidity}%`,
     windInfo: `${data.wind.speed}km/h`,
+    pressureInfo: `${data.main.pressure}mbar`,
   };
-  console.log(dataObject.windInfo);
+  console.log(dataObject.pressureInfo);
   // ----------------------------------------------------------------
   // give Danamic Value to the HTML Elements from Api Data
   document.getElementById("current-temp").textContent =
@@ -74,32 +75,8 @@ async function fetchWeatherApi() {
   document.getElementById("description").textContent = dataObject.description;
   document.getElementById("humidity").textContent = dataObject.humidityInfo;
   document.getElementById("wind").textContent = dataObject.windInfo;
+  document.getElementById("pressure").textContent = dataObject.pressureInfo;
 
-  // ----------------------------------------------------------------
-  // function to Display Days
-  // const displayDaysForecast = () => {
-  // 	daily.textContent = '';
-  // 	for (let i = 0; i < data.forecast.forecastday.length; i++) {
-  // 		let theDays = [ 'So', 'Mo', 'Tu', 'We', 'Thu', 'Fr', 'Sa' ];
-  // 		let date = new Date(data.forecast.forecastday[i].date);
-  // 		let dayName = '';
-  // 		if (i === 0) {
-  // 			dayName = 'Today';
-  // 		} else {
-  // 			dayName = theDays[date.getDay()];
-  // 		}
-  // 		let day = document.createElement('div');
-  // 		day.className = 'day';
-  // 		day.innerHTML = `
-  //         <span>${dayName}</span>
-  //         <span><img src=${data.forecast.forecastday[i].day.condition.icon}></span>
-  //         <span>${data.forecast.forecastday[i].day.mintemp_c}°/${data.forecast.forecastday[i].day.maxtemp_c}°</span>
-  //         <span>${data.forecast.forecastday[i].day.maxwind_kph}km/h</span>
-  //       `;
-  // 		daily.appendChild(day);
-  // 	}
-  // };
-  // displayDaysForecast();
   // ----------------------------------------------------------------
   // function to change the backgroundImage
   const changeBg = () => {
@@ -194,6 +171,32 @@ async function fetchWeatherApi() {
     app.style.opacity = "1";
   };
   changeBg();
+
+  // ----------------------------------------------------------------
+  // function to Display Days
+  // const displayDaysForecast = () => {
+  // 	daily.textContent = '';
+  // 	for (let i = 0; i < data.forecast.forecastday.length; i++) {
+  // 		let theDays = [ 'So', 'Mo', 'Tu', 'We', 'Thu', 'Fr', 'Sa' ];
+  // 		let date = new Date(data.forecast.forecastday[i].date);
+  // 		let dayName = '';
+  // 		if (i === 0) {
+  // 			dayName = 'Today';
+  // 		} else {
+  // 			dayName = theDays[date.getDay()];
+  // 		}
+  // 		let day = document.createElement('div');
+  // 		day.className = 'day';
+  // 		day.innerHTML = `
+  //         <span>${dayName}</span>
+  //         <span><img src=${data.forecast.forecastday[i].day.condition.icon}></span>
+  //         <span>${data.forecast.forecastday[i].day.mintemp_c}°/${data.forecast.forecastday[i].day.maxtemp_c}°</span>
+  //         <span>${data.forecast.forecastday[i].day.maxwind_kph}km/h</span>
+  //       `;
+  // 		daily.appendChild(day);
+  // 	}
+  // };
+  // displayDaysForecast();
 }
 
 fetchWeatherApi();
